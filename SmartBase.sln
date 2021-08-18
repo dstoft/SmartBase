@@ -6,6 +6,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartReference", "SmartRefe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Application", "SmartReference\SmartReference.Application\SmartReference.Application.csproj", "{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Api", "SmartReference\SmartReference.Api\SmartReference.Api.csproj", "{4D701273-E662-469F-8F81-1A7CA07286D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D701273-E662-469F-8F81-1A7CA07286D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D701273-E662-469F-8F81-1A7CA07286D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D701273-E662-469F-8F81-1A7CA07286D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D701273-E662-469F-8F81-1A7CA07286D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A} = {D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}
+		{4D701273-E662-469F-8F81-1A7CA07286D2} = {D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}
 	EndGlobalSection
 EndGlobal
