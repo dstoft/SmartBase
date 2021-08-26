@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  sb-database:
+    image: postgres
+    container_name: sb-database
+    ports:
+      - 5436:5432
+    environment:
+      POSTGRES_USER: smartbase
+      POSTGRES_PASSWORD: smartbase1
+      POSTGRES_DB: smartbase_db
