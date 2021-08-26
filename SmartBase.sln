@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBase", "SmartBase\SmartBase.csproj", "{233CCB38-8498-4822-933C-B234488BE292}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartReference", "SmartReference", "{D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Application", "SmartReference\SmartReference.Application\SmartReference.Application.csproj", "{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}"
@@ -14,10 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{233CCB38-8498-4822-933C-B234488BE292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{233CCB38-8498-4822-933C-B234488BE292}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{233CCB38-8498-4822-933C-B234488BE292}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{233CCB38-8498-4822-933C-B234488BE292}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A}.Release|Any CPU.ActiveCfg = Release|Any CPU
