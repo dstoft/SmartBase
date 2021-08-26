@@ -6,6 +6,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Api", "SmartReference\SmartReference.Api\SmartReference.Api.csproj", "{4D701273-E662-469F-8F81-1A7CA07286D2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SmartBase", "SmartBase", "{CFF3798B-DD8A-4E80-866A-D53B36460131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBase.Infrastructure", "SmartBase\SmartBase.Infrastructure\SmartBase.Infrastructure.csproj", "{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReference.Domain", "SmartReference\SmartReference.Domain\SmartReference.Domain.csproj", "{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +26,19 @@ Global
 		{4D701273-E662-469F-8F81-1A7CA07286D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D701273-E662-469F-8F81-1A7CA07286D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D701273-E662-469F-8F81-1A7CA07286D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5DD0944D-8AA3-43E4-979C-3CF60D9B919A} = {D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}
 		{4D701273-E662-469F-8F81-1A7CA07286D2} = {D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}
+		{DEB5602E-0FA3-4B2D-A9F9-263D2DFAA941} = {CFF3798B-DD8A-4E80-866A-D53B36460131}
+		{FC148F9E-FF34-4F51-9CEB-49CC6AA5F0FD} = {D9FE1C31-FDDB-409F-B235-89FC6D5B8C9E}
 	EndGlobalSection
 EndGlobal
