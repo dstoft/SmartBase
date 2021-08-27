@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SmartReference.Domain;
+using SmartReference.Domain.Models;
 
 namespace SmartReference.Infrastructure
 {

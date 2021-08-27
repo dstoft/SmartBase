@@ -12,6 +12,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SmartReference.Application.Interfaces;
+using SmartReference.Application.Services;
+using SmartReference.Domain.Interfaces;
+using SmartReference.Infrastructure.Repositories;
 
 namespace SmartReference.Api
 {
@@ -27,6 +31,9 @@ namespace SmartReference.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IReferenceRepository, ReferenceRepository>();
+            services.AddScoped<IReferenceService, ReferenceService>();
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

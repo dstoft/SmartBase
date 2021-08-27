@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace SmartReference.Domain
+namespace SmartReference.Domain.Models
 {
     public class Reference
     {

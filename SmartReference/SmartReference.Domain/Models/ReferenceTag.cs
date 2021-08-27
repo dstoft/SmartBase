@@ -1,8 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SmartReference.Domain
+namespace SmartReference.Domain.Models
 {
     public class ReferenceTag
     {
