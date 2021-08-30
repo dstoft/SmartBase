@@ -12,7 +12,7 @@ namespace SmartReference.Api.Controllers
     [Route("[controller]")]
     public class ReferenceController : ControllerBase
     {
-        private IReferenceService _referenceService;
+        private readonly IReferenceService _referenceService;
 
         public ReferenceController(IReferenceService referenceService)
         {
