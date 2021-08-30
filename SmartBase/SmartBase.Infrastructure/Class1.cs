@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SmartBase.Infrastructure
+﻿namespace SmartBase.Infrastructure
 {
     public class Class1
     {

@@ -4,6 +4,5 @@ namespace SmartReference.Infrastructure.Repositories
 {
     public class ReferenceTagRepository : IReferenceTagRepository
     {
-        
     }
 }

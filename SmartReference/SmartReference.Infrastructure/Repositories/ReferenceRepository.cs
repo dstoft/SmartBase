@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using SmartReference.Domain.Models;
 using SmartReference.Domain.Interfaces;
+using SmartReference.Domain.Models;
 
 namespace SmartReference.Infrastructure.Repositories
 {
     public class ReferenceRepository : IReferenceRepository
     {
-        private ReferenceContext _context;
+        private readonly ReferenceContext _context;
 
         public ReferenceRepository(ReferenceContext context)
         {

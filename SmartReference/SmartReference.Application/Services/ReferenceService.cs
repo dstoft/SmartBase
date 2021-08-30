@@ -8,7 +8,7 @@ namespace SmartReference.Application.Services
 {
     public class ReferenceService : IReferenceService
     {
-        private IReferenceRepository _repository;
+        private readonly IReferenceRepository _repository;
 
         public ReferenceService(IReferenceRepository repository)
         {
