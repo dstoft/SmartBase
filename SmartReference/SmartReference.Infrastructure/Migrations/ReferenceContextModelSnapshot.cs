@@ -19,7 +19,7 @@ namespace SmartReference.Infrastructure.Migrations
                 .HasAnnotation("ProductVersion", "5.0.9")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("SmartReference.Domain.Reference", b =>
+            modelBuilder.Entity("SmartReference.Domain.Models.Reference", b =>
                 {
                     b.Property<string>("Name")
                         .HasColumnType("text");
@@ -38,7 +38,7 @@ namespace SmartReference.Infrastructure.Migrations
                     b.ToTable("References");
                 });
 
-            modelBuilder.Entity("SmartReference.Domain.ReferenceTag", b =>
+            modelBuilder.Entity("SmartReference.Domain.Models.ReferenceTag", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,7 +59,7 @@ namespace SmartReference.Infrastructure.Migrations
                     b.ToTable("ReferenceTags");
                 });
 
-            modelBuilder.Entity("SmartReference.Domain.Tag", b =>
+            modelBuilder.Entity("SmartReference.Domain.Models.Tag", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -73,13 +73,13 @@ namespace SmartReference.Infrastructure.Migrations
                     b.ToTable("Tags");
                 });
 
-            modelBuilder.Entity("SmartReference.Domain.ReferenceTag", b =>
+            modelBuilder.Entity("SmartReference.Domain.Models.ReferenceTag", b =>
                 {
-                    b.HasOne("SmartReference.Domain.Reference", "Reference")
+                    b.HasOne("SmartReference.Domain.Models.Reference", "Reference")
                         .WithMany("ReferenceTags")
                         .HasForeignKey("ReferenceName");
 
-                    b.HasOne("SmartReference.Domain.Tag", "Tag")
+                    b.HasOne("SmartReference.Domain.Models.Tag", "Tag")
                         .WithMany()
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -90,7 +90,7 @@ namespace SmartReference.Infrastructure.Migrations
                     b.Navigation("Tag");
                 });
 
-            modelBuilder.Entity("SmartReference.Domain.Reference", b =>
+            modelBuilder.Entity("SmartReference.Domain.Models.Reference", b =>
                 {
                     b.Navigation("ReferenceTags");
                 });

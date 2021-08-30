@@ -15,6 +15,7 @@ using Microsoft.OpenApi.Models;
 using SmartReference.Application.Interfaces;
 using SmartReference.Application.Services;
 using SmartReference.Domain.Interfaces;
+using SmartReference.Infrastructure;
 using SmartReference.Infrastructure.Repositories;
 
 namespace SmartReference.Api
@@ -40,7 +41,7 @@ namespace SmartReference.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SmartReference.Api", Version = "v1" });
             });
             
-            services.AddDbContext<SmartReference.Infrastructure.ReferenceContext>(options =>
+            services.AddDbContext<ReferenceContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("ReferenceContext")));
         }
 
