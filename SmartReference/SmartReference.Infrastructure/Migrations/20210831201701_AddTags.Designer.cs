@@ -10,7 +10,7 @@ using SmartReference.Infrastructure;
 namespace SmartReference.Infrastructure.Migrations
 {
     [DbContext(typeof(ReferenceContext))]
-    [Migration("20210830174552_AddTags")]
+    [Migration("20210831201701_AddTags")]
     partial class AddTags
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,28 +49,24 @@ namespace SmartReference.Infrastructure.Migrations
                     b.Property<string>("ReferenceName")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("TagId")
-                        .HasColumnType("uuid");
+                    b.Property<string>("TagName")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ReferenceName");
 
-                    b.HasIndex("TagId");
+                    b.HasIndex("TagName");
 
                     b.ToTable("ReferenceTags");
                 });
 
             modelBuilder.Entity("SmartReference.Domain.Models.Tag", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("Name");
 
                     b.ToTable("Tags");
                 });
@@ -83,9 +79,7 @@ namespace SmartReference.Infrastructure.Migrations
 
                     b.HasOne("SmartReference.Domain.Models.Tag", "Tag")
                         .WithMany()
-                        .HasForeignKey("TagId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TagName");
 
                     b.Navigation("Reference");
 

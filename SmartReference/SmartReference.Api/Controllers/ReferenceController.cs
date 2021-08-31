@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,9 @@ namespace SmartReference.Api.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         public ActionResult<string> Create(CreateReferenceParameters parameters)
         {
-            return Created("wowowow", "lol");
+            var created = _referenceService.Create(parameters);
+            Console.WriteLine("!!!" + created.ReferenceTags.Count);
+            return Created(created.Name, created);
         }
 
         [HttpGet]

@@ -1,16 +1,14 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace SmartReference.Domain.Models
 {
     public class Tag
     {
-        public Tag(Guid id, string name)
+        public Tag(string name)
         {
-            Id = id;
             Name = name;
         }
 
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
+        [Key] public string Name { get; private set; }
     }
 }

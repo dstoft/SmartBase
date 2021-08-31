@@ -7,5 +7,6 @@ namespace SmartReference.Domain.Interfaces
     {
         public string Create(Reference reference);
         public IEnumerable<Reference> List();
+        public Reference Get(string name);
     }
 }

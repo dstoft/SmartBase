@@ -27,8 +27,14 @@ namespace SmartReference.Api
         {
             services.AddScoped<IReferenceRepository, ReferenceRepository>();
             services.AddScoped<IReferenceService, ReferenceService>();
+            services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<ITagService, TagService>();
+            services.AddScoped<IReferenceTagRepository, ReferenceTagRepository>();
+            services.AddScoped<IReferenceTagService, ReferenceTagService>();
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            ;
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SmartReference.Api", Version = "v1" });

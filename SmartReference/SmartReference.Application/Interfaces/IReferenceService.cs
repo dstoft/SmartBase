@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using SmartReference.Application.Parameters;
 using SmartReference.Domain.Models;
 
 namespace SmartReference.Application.Interfaces
 {
     public interface IReferenceService
     {
-        public string Create(Reference reference);
+        public Reference Create(CreateReferenceParameters parameters);
         public IEnumerable<Reference> List();
     }
 }

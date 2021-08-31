@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using SmartReference.Domain.Interfaces;
 using SmartReference.Domain.Models;
 
@@ -19,9 +19,16 @@ namespace SmartReference.Infrastructure.Repositories
             return _context.References;
         }
 
+        public Reference Get(string name)
+        {
+            return _context.References.FirstOrDefault(r => r.Name.Equals(name));
+        }
+
         public string Create(Reference reference)
         {
-            throw new NotImplementedException();
+            _context.References.Add(reference);
+            _context.SaveChanges();
+            return reference.Name;
         }
     }
 }
