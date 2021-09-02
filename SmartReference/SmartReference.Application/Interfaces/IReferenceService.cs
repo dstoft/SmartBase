@@ -8,5 +8,6 @@ namespace SmartReference.Application.Interfaces
     {
         public Reference Create(CreateReferenceParameters parameters);
         public IEnumerable<Reference> List();
+        public IEnumerable<Reference> ListOnTag(ListReferencesOnTag parameters);
     }
 }

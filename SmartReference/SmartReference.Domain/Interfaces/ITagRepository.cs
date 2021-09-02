@@ -1,4 +1,5 @@
-﻿using SmartReference.Domain.Models;
+﻿using System.Collections.Generic;
+using SmartReference.Domain.Models;
 
 namespace SmartReference.Domain.Interfaces
 {
@@ -6,5 +7,6 @@ namespace SmartReference.Domain.Interfaces
     {
         public string Create(Tag tag);
         public Tag Get(string name);
+        public IEnumerable<Tag> List();
     }
 }

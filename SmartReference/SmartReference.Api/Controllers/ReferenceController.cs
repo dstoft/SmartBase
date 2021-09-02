@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -25,7 +24,6 @@ namespace SmartReference.Api.Controllers
         public ActionResult<string> Create(CreateReferenceParameters parameters)
         {
             var created = _referenceService.Create(parameters);
-            Console.WriteLine("!!!" + created.ReferenceTags.Count);
             return Created(created.Name, created);
         }
 
@@ -34,6 +32,13 @@ namespace SmartReference.Api.Controllers
         public ActionResult<IEnumerable<Reference>> List()
         {
             return Ok(_referenceService.List());
+        }
+
+        [HttpGet("tag/{tagName}")]
+        [ProducesResponseType(typeof(Reference[]), (int)HttpStatusCode.OK)]
+        public ActionResult<IEnumerable<Reference>> ListOnTag(string tagName)
+        {
+            return Ok(_referenceService.ListOnTag(new ListReferencesOnTag { TagName = tagName }));
         }
     }
 }

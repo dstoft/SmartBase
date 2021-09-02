@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using SmartReference.Domain.Interfaces;
 using SmartReference.Domain.Models;
 
@@ -23,6 +24,11 @@ namespace SmartReference.Infrastructure.Repositories
         public Tag Get(string name)
         {
             return _context.Tags.FirstOrDefault(t => t.Name.Equals(name));
+        }
+
+        public IEnumerable<Tag> List()
+        {
+            return _context.Tags;
         }
     }
 }

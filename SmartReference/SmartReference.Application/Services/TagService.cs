@@ -1,4 +1,5 @@
-﻿using SmartReference.Application.Interfaces;
+﻿using System.Collections.Generic;
+using SmartReference.Application.Interfaces;
 using SmartReference.Application.Parameters;
 using SmartReference.Domain.Interfaces;
 using SmartReference.Domain.Models;
@@ -27,6 +28,11 @@ namespace SmartReference.Application.Services
             tag = new Tag(parameters.Name);
             _tagRepository.Create(tag);
             return tag;
+        }
+
+        public IEnumerable<Tag> List()
+        {
+            return _tagRepository.List();
         }
     }
 }

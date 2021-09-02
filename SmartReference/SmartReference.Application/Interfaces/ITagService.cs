@@ -1,4 +1,5 @@
-﻿using SmartReference.Application.Parameters;
+﻿using System.Collections.Generic;
+using SmartReference.Application.Parameters;
 using SmartReference.Domain.Models;
 
 namespace SmartReference.Application.Interfaces
@@ -7,5 +8,6 @@ namespace SmartReference.Application.Interfaces
     {
         public Tag Get(string name);
         public Tag Create(CreateTagParameters parameters);
+        public IEnumerable<Tag> List();
     }
 }

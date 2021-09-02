@@ -18,6 +18,6 @@ namespace SmartReference.Domain.Models
         public string Link { get; private set; }
         public string Summary { get; private set; }
         public string Citation { get; private set; }
-        public ICollection<ReferenceTag> ReferenceTags { get; } = new List<ReferenceTag>();
+        public virtual ICollection<ReferenceTag> ReferenceTags { get; } = new List<ReferenceTag>();
     }
 }

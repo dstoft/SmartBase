@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using SmartReference.Domain.Interfaces;
 using SmartReference.Domain.Models;
 
@@ -29,6 +30,16 @@ namespace SmartReference.Infrastructure.Repositories
             _context.References.Add(reference);
             _context.SaveChanges();
             return reference.Name;
+        }
+
+        public IEnumerable<Reference> GetOnReferenceTagTag(Tag tag)
+        {
+            var query = from referenceTag in _context.ReferenceTags
+                join reference in _context.References
+                    on referenceTag.ReferenceName equals reference.Name
+                where referenceTag.TagName == tag.Name
+                select reference;
+            return query.Include("ReferenceTags.Tag").ToList();
         }
     }
 }

@@ -36,5 +36,11 @@ namespace SmartReference.Application.Services
         {
             return _repository.List();
         }
+
+        public IEnumerable<Reference> ListOnTag(ListReferencesOnTag parameters)
+        {
+            var tag = _tagService.Get(parameters.TagName);
+            return _repository.GetOnReferenceTagTag(tag);
+        }
     }
 }
